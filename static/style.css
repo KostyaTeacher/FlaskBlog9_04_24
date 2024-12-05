@@ -1,0 +1,13 @@
+.h1info {
+border: 2px #eee dotted; !important
+color: brown; !important
+text-align: center; !important
+padding: 10px;
+}
+
+.flashes {
+    background-color: brown;
+    text-color: red;
+    text-wide: 20px;
+    text-align: center;
+}

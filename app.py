@@ -52,8 +52,8 @@ def get_edit(post_id):
 @app.post("/<int:post_id>/edit")
 def post_edit(post_id):
     post = return_post(post_id)
-    title = request.form["title"]
-    content = request.form["content"]
+    title = request.form.get("title")
+    content = request.form.get("content")
     if not title or len(title) < 5:
         flash("Title is required!")
         return render_template("edit.html", post=post)

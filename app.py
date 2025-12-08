@@ -32,8 +32,8 @@ def get_create():
 
 @app.post("/create/")
 def post_create():
-    title = request.form["title"]
-    content = request.form["content"]
+    title = request.form.get("title")
+    content = request.form.get("content")
     if not title or len(title) < 5:
         flash("Title is required!")
         return render_template("create.html")
